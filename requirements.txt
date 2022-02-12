@@ -6,3 +6,4 @@ sqlalchemy==1.4.29
 pymysql==0.9.3
 aiomysql==0.0.22
 alembic==1.7.5
+pytest==7.0.1

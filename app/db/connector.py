@@ -1,6 +1,6 @@
 from dataclasses  import asdict
 from config import DBConfig
-from sqlalchemy.ext.asyncio import AsyncEngine, AsyncSession, create_async_engine
+from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 
 

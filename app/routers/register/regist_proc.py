@@ -17,7 +17,7 @@ async def check_user(user: User):
     session = conn.get_session()
     async with session() as session:
         result = await session.execute(select(User.username).where(User.username == user.username))
-        return False if result.first() else True
+        return True if result.first() else False
 
 
 async def regist_user(user: User):
@@ -40,7 +40,7 @@ async def regist_proc(user: UserModel):
     )
     try:
         check = await check_user(user)
-        if check:
+        if not check:
             await regist_user(user)
             return PlainTextResponse("OK", 200)
         else:

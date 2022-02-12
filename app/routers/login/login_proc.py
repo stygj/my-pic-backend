@@ -1,8 +1,7 @@
 import bcrypt
 from fastapi import Depends
 from fastapi.responses import PlainTextResponse
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from pydantic import BaseModel, Field
+from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.sql import select
 from app.db.models import User
 from app.db.connector import conn
