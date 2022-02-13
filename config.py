@@ -11,7 +11,7 @@ class AppConfig:
 @dataclass
 class DBConfig:
     driver:str = 'mysql+aiomysql'
-    host: str = ''
+    host: str = 'localhost'
     port: int = 0
     user: str =''
     password: str = ''

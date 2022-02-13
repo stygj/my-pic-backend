@@ -4,7 +4,6 @@ from config import AppConfig, DBConfig
 from .routers.register import regist_api
 from .routers.login import login_api
 
-
 # app 객체 생성
 app = FastAPI(**asdict(AppConfig()))
 
