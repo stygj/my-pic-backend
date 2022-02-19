@@ -11,8 +11,8 @@ class AppConfig:
 @dataclass
 class DBConfig:
     driver:str = 'mysql+aiomysql'
-    host: str = ''
-    port: int = 0
-    user: str =''
-    password: str = ''
-    db: str = ''
+    host: str = 'localhost'
+    port: int = 3306
+    user: str ='mediacat'
+    password: str = 'mediacat'
+    db: str = 'MEDIACAT'
