@@ -7,3 +7,5 @@ pymysql==0.9.3
 aiomysql==0.0.22
 alembic==1.7.5
 pytest==7.0.1
+bcrypt==3.2.0
+python-multipart==0.0.5
