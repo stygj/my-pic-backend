@@ -1,9 +1,13 @@
+from datetime import datetime
 from sqlalchemy import Integer, String, DateTime
-from sqlalchemy.orm import DeclarativeBase, Mapped, MappedAsDataclass, mapped_column
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
-class Base(MappedAsDataclass, DeclarativeBase):
+class Base(DeclarativeBase):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    created_at: Mapped[DateTime] = mapped_column(DateTime, default=datetime.now())
+    updated_at: Mapped[DateTime] = mapped_column(DateTime)
+    deleted_at: Mapped[DateTime] = mapped_column(DateTime)
 
 
 class User(Base):
@@ -13,6 +17,3 @@ class User(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     username: Mapped[str] = mapped_column(String(15))
     password: Mapped[str] = mapped_column(String(50))
-    created_at: Mapped[DateTime] = mapped_column(DateTime)
-    updated_at: Mapped[DateTime] = mapped_column(DateTime)
-    deleted_at: Mapped[DateTime] = mapped_column(DateTime)
